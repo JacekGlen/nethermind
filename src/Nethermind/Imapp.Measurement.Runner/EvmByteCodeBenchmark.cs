@@ -35,7 +35,7 @@ namespace Imapp.Measurement.Runner
         public void GlobalSetup(string bytecode)
         {
             ByteCode = Bytes.FromHexString(bytecode);
-            Console.WriteLine($"Running benchmark for bytecode {ByteCode?.ToHexString()}");
+            //Console.WriteLine($"Running benchmark for bytecode {ByteCode?.ToHexString()}");
 
             TrieStore trieStore = new(new MemDb(), new OneLoggerLogManager(NullLogger.Instance));
             IKeyValueStore codeDb = new MemDb();
