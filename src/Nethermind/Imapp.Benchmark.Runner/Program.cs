@@ -10,7 +10,8 @@ namespace Imapp.Benchmark.Runner
         static void Main(string[] args)
         {
             var config = new ManualConfig()
-               .WithOptions(ConfigOptions.DisableOptimizationsValidator)
+                .WithOptions(ConfigOptions.DisableOptimizationsValidator)
+                .WithOptions(ConfigOptions.DisableLogFile)
                 //.AddValidator(JitOptimizationsValidator.DontFailOnError)
                 .AddLogger(new BenchmarkNullLogger())
                 //.AddLogger(BenchmarkDotNet.Loggers.ConsoleLogger.Default)
