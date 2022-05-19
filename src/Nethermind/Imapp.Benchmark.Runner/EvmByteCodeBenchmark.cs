@@ -17,6 +17,9 @@ using Nethermind.Evm.Benchmark;
 
 namespace Imapp.Benchmark.Runner
 {
+    [MaxWarmupCount(10)]
+    [MaxIterationCount(40)]
+    [MemoryDiagnoser]
     public class EvmByteCodeBenchmark
     {
         public static byte[] ByteCode { get; set; }

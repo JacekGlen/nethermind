@@ -56,7 +56,7 @@ namespace Imapp.Benchmark.Runner
 
             var memAllocPerOp = reportActual.GcStats.GetBytesAllocatedPerOperation(reportActual.BenchmarkCase);
 
-            Console.WriteLine($"{sampleId},{reportActual.ResultStatistics.N},{overheadTime},{loopExecutionTime},{totalTime},{reportActual.ResultStatistics.StandardDeviation},{memAllocPerOp},{reportActual.GcStats.TotalOperations}");
+            Console.WriteLine($"{sampleId},{reportActual.ResultStatistics.N},{overheadTime},{loopExecutionTime},{totalTime},{reportActual.ResultStatistics.StandardDeviation},{reportActual.GcStats.TotalOperations},{memAllocPerOp}");
         }
     }
 }
